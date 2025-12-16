@@ -50,7 +50,7 @@ export const FAQ = () => {
 
   return (
     <div className="flex flex-col items-center gap-8 md:gap-12 px-4 md:px-[124.84px] py-20 relative w-full">
-      <h2 className="font-rem font-normal text-text-primary text-3xl md:text-4xl lg:text-5xl text-center px-4 leading-[55px]">
+      <h2 className="font-rem font-normal text-text-primary text-3xl md:text-4xl lg:text-5xl text-center px-4 leading-tight md:leading-[55px]">
         Frequently Asked Question
       </h2>
 
@@ -62,20 +62,20 @@ export const FAQ = () => {
               <div key={item.id} className="w-full">
                 <button
                   onClick={() => toggleItem(index)}
-                  className="flex items-center justify-between w-full py-4 px-0 text-left hover:bg-gray-50 transition-colors rounded"
+                  className="flex items-center justify-between w-full py-4 px-0 text-left hover:bg-moovdrop-cream/30 transition-colors rounded"
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${item.id}`}
                 >
-                  <p className={`font-rem font-normal text-base leading-4 pr-4 ${
-                    isOpen ? "text-moovdrop-primary" : "text-moovdrop-primary-dark"
+                  <p className={`font-dm-sans font-bold text-base md:text-lg leading-snug pr-4 ${
+                    isOpen ? "text-moovdrop-primary" : "text-text-primary"
                   }`}>
                     {item.question}
                   </p>
                   <div className="flex-shrink-0">
                     <svg
-                      className={`w-4 h-4 transition-transform duration-200 ${
+                      className={`w-4 h-4 transition-transform duration-moovdrop-base ${
                         isOpen ? "rotate-180" : ""
-                      }`}
+                      } ${isOpen ? "text-moovdrop-primary" : "text-text-secondary"}`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -92,19 +92,19 @@ export const FAQ = () => {
 
                 <div
                   id={`faq-answer-${item.id}`}
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  className={`overflow-hidden transition-all duration-moovdrop-slow ease-in-out ${
                     isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
                   <div className="pb-4 pt-2">
-                    <p className="font-dm-sans font-normal text-text-tertiary text-xs leading-relaxed">
+                    <p className="font-dm-sans font-normal text-text-secondary text-sm md:text-base leading-relaxed">
                       {item.answer}
                     </p>
                   </div>
                 </div>
 
                 {index < faqData.length - 1 && (
-                  <div className="w-full h-px bg-gray-200 my-2" />
+                  <div className="w-full h-px bg-moovdrop-cream my-2" />
                 )}
               </div>
             );

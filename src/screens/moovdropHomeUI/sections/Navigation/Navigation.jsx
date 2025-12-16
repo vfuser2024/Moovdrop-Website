@@ -1,4 +1,8 @@
 import React from "react";
+import { Button } from "../../../../components/ui";
+import { quickLinks } from "../../../../data/navigation";
+
+const navLinks = quickLinks.slice(0, 3); // Use first 3 links for nav
 
 export const Navigation = () => {
   return (
@@ -9,28 +13,18 @@ export const Navigation = () => {
 
         {/* Navigation Links */}
         <div className="inline-flex items-center gap-4 md:gap-9 relative flex-wrap justify-center">
-          <button className="inline-flex items-center justify-center gap-2.5 px-6 py-1.5 bg-black/15 rounded-moovdrop-xl font-dm-sans font-bold text-white text-base text-center tracking-[-0.40px] leading-[22.4px] whitespace-nowrap hover:bg-black/25 transition-colors">
-            Rent a Vehicle
-          </button>
-
-          <button className="inline-flex items-center justify-center gap-2.5 px-6 py-1.5 bg-black/15 rounded-moovdrop-xl font-dm-sans font-bold text-white text-base text-center tracking-[-0.40px] leading-[22.4px] whitespace-nowrap hover:bg-black/25 transition-colors">
-            Become Driver
-          </button>
-
-          <button className="inline-flex items-center justify-center gap-2.5 px-6 py-1.5 bg-black/15 rounded-moovdrop-xl font-dm-sans font-bold text-white text-base text-center tracking-[-0.40px] leading-[22.4px] whitespace-nowrap hover:bg-black/25 transition-colors">
-            About Us
-          </button>
+          {navLinks.map((link) => (
+            <Button key={link.id} variant="nav" size="sm">
+              {link.label}
+            </Button>
+          ))}
         </div>
       </div>
 
       {/* CTA Button */}
-      <a
-        className="inline-flex items-center gap-[1.73px] px-8 md:px-12 py-3 bg-moovdrop-accent rounded-moovdrop-full justify-center font-dm-sans font-bold text-white text-lg text-center tracking-[-0.45px] leading-[25.2px] whitespace-nowrap hover:bg-moovdrop-accent-dark transition-colors"
-        href="#"
-        rel="noopener noreferrer"
-      >
+      <Button variant="accent" size="lg" href="#">
         Register Now
-      </a>
+      </Button>
     </nav>
   );
 };

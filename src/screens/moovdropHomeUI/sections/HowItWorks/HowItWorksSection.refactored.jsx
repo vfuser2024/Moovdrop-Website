@@ -21,8 +21,8 @@ export const HowItWorksSection = () => {
       </div>
 
       {/* Spacer */}
-      <div className="flex flex-col items-center justify-center gap-12 p-10 sm:p-16 md:p-20 relative self-stretch w-full flex-[0_0_auto]">
-        <div className="relative self-stretch w-full h-[200px] sm:h-[400px] md:h-[566px]" />
+      <div className="flex flex-col items-center justify-center gap-12 p-20 relative self-stretch w-full flex-[0_0_auto]">
+        <div className="relative self-stretch w-full h-[566px]" />
       </div>
 
       {/* Service Benefits Section */}
@@ -35,7 +35,7 @@ export const HowItWorksSection = () => {
               </div>
 
               <div className="relative w-full md:w-[542px] h-auto md:h-[55px]">
-                <h2 className="relative md:absolute top-0 left-0 font-rem font-normal text-text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight md:leading-[55px]">
+                <h2 className="absolute top-0 left-0 font-rem font-normal text-text-primary text-3xl md:text-4xl lg:text-5xl leading-[55px]">
                   Fast.&nbsp;&nbsp;Simple.&nbsp;&nbsp;Affordable.
                 </h2>
               </div>
@@ -51,7 +51,7 @@ export const HowItWorksSection = () => {
                     {benefit.title}
                   </div>
 
-                  <p className={`relative w-full ${index < 2 ? 'md:w-[480px]' : 'sm:w-[480px]'} ${index > 2 ? 'mb-[-2.66px]' : ''} ${index > 2 ? '[font-family:\'DM_Sans\',Helvetica]' : 'font-dm-sans'} font-normal ${index > 2 ? 'text-[#999999]' : 'text-text-tertiary'} text-sm md:text-base ${index > 2 ? 'tracking-[-0.08px] leading-[22.4px]' : ''}`}>
+                  <p className={`relative ${index < 2 ? 'w-full md:w-[480px]' : 'w-[480px]'} ${index > 2 ? 'mb-[-2.66px]' : ''} ${index > 2 ? '[font-family:\'DM_Sans\',Helvetica]' : 'font-dm-sans'} font-normal ${index > 2 ? 'text-[#999999]' : 'text-text-tertiary'} text-sm md:text-base ${index > 2 ? 'tracking-[-0.08px] leading-[22.4px]' : ''}`}>
                     {benefit.description}
                   </p>
                 </div>
@@ -96,7 +96,7 @@ export const HowItWorksSection = () => {
 
         <div className="flex flex-col w-full md:w-[489px] items-start gap-8 md:gap-12 pt-[var(--size-space-600)] pb-[var(--size-space-600)] px-4 md:px-0 relative">
           <div className="flex flex-col items-start gap-[34.68px] pl-0 pr-0 md:pr-[69.36px] py-0 relative self-stretch w-full flex-[0_0_auto]">
-            <h2 className="relative w-full md:w-[581px] font-rem font-normal text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight sm:leading-snug md:leading-[55px]">
+            <h2 className="relative w-full md:w-[581px] font-rem font-normal text-white text-3xl md:text-4xl lg:text-5xl leading-[55px]">
               Moving service connected
               <br />
               to your needs
@@ -109,7 +109,7 @@ export const HowItWorksSection = () => {
                 key={step.id}
                 className={`flex ${index === 0 ? 'gap-4 md:gap-[26.01px]' : 'items-start justify-center gap-4 md:gap-[26.01px]'} ${index === 0 ? 'self-stretch w-full items-start justify-center' : ''} pl-0 pr-0 md:pr-[69.36px] ${index === 0 ? 'py-4' : 'py-[17.34px]'} relative ${index === 0 ? 'self-stretch w-full' : 'self-stretch w-full'} flex-[0_0_auto] ${index > 0 ? 'border-t border-moovdrop-primary' : ''}`}
               >
-                <div className={`relative w-fit ${index > 0 ? 'mt-[-0.87px]' : ''} ${index > 0 ? '[font-family:\'DM_Sans\',Helvetica]' : 'font-dm-sans'} font-light text-white text-3xl sm:text-4xl ${index > 0 ? 'tracking-[-0.18px]' : ''} leading-[40px] sm:leading-[50.4px] whitespace-nowrap flex-shrink-0`}>
+                <div className={`relative w-fit ${index > 0 ? 'mt-[-0.87px]' : ''} ${index > 0 ? '[font-family:\'DM_Sans\',Helvetica]' : 'font-dm-sans'} font-light text-white text-4xl ${index > 0 ? 'tracking-[-0.18px]' : ''} leading-[50.4px] whitespace-nowrap`}>
                   {step.number}
                 </div>
 
@@ -176,15 +176,25 @@ export const HowItWorksSection = () => {
       </div>
 
       {/* Vehicle Types Section */}
-      <div className="flex flex-col items-center gap-8 md:gap-12 px-4 md:px-20 py-20 relative self-stretch w-full flex-[0_0_auto] max-w-[1300.42px] mx-auto">
-        <h2 className="relative w-full font-rem font-normal text-text-primary text-3xl md:text-4xl lg:text-5xl text-center">
+      <div className="flex flex-col items-center gap-8 md:gap-12 px-4 md:px-0 py-20 relative self-stretch w-full flex-[0_0_auto]">
+        <h2 className="relative w-fit font-rem font-normal text-text-primary text-3xl md:text-4xl lg:text-5xl text-center px-4">
           Find your desire vehicle type
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-[35px] relative w-full">
-          {vehicles.map((vehicle) => (
-            <VehicleCard key={vehicle.id} {...vehicle} />
-          ))}
+        <div className="flex flex-col items-center gap-6 md:gap-[35px] relative self-stretch w-full flex-[0_0_auto]">
+          {/* First row of vehicles */}
+          <div className="flex flex-col md:flex-row items-start gap-6 md:gap-[35px] px-4 md:px-20 py-0 relative self-stretch w-full flex-[0_0_auto]">
+            {vehicles.slice(0, 3).map((vehicle) => (
+              <VehicleCard key={vehicle.id} {...vehicle} />
+            ))}
+          </div>
+
+          {/* Second row of vehicles */}
+          <div className="flex flex-col md:flex-row items-start gap-6 md:gap-[35px] px-4 md:px-20 py-0 relative self-stretch w-full flex-[0_0_auto]">
+            {vehicles.slice(3, 5).map((vehicle) => (
+              <VehicleCard key={vehicle.id} {...vehicle} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

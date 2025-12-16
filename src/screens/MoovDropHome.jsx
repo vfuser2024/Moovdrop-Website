@@ -8,7 +8,7 @@ import { Footer } from "./moovdropHomeUI/sections/Footer";
 export const MoovdripHomeUi = () => {
   return (
     <div
-      className="flex flex-col items-center relative bg-backgroundbackground-1 min-h-screen w-full overflow-x-hidden overflow-y-visible"
+      className="flex flex-col items-center relative bg-white min-h-screen w-full overflow-x-hidden overflow-y-visible"
       data-model-id="193:8901"
     >
       <Navigation />
