@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   MoovDrop Design System - CSS Variables
+   ============================================ */
+:root {
+  /* Brand Colors */
+  --color-primary: #7048ce;
+  --color-primary-dark: #381e61;
+  --color-primary-light: #cdc6f9;
+  --color-accent: #d97b00;
+  --color-accent-dark: #c06d00;
+  --color-background: #ffffff;
+  --color-background-cream: #f0ede2;
+  --color-background-dark: #001f3e;
+  
+  /* Text Colors */
+  --color-text-primary: #1e1d1f;
+  --color-text-secondary: #57555a;
+  --color-text-tertiary: #999999;
+  --color-text-placeholder: #aaaaaa;
+  --color-text-white: #ffffff;
+  
+  /* Typography */
+  --font-family-sans: "DM Sans", Helvetica, Arial, sans-serif;
+  --font-family-serif: "REM", Helvetica, Arial, sans-serif;
+  
+  /* Font Sizes */
+  --font-size-xs: 13px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 32px;
+  --font-size-4xl: 36px;
+  --font-size-5xl: 50px;
+  --font-size-6xl: 69.4px;
+  --font-size-7xl: 80px;
+  
+  /* Line Heights */
+  --line-height-tight: 1.1;
+  --line-height-normal: 1.4;
+  --line-height-relaxed: 1.6;
+  
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.48px;
+  --letter-spacing-normal: -0.40px;
+  --letter-spacing-wide: -0.35px;
+  
+  /* Spacing Scale */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-2xl: 24px;
+  --spacing-3xl: 30px;
+  --spacing-4xl: 40px;
+  --spacing-5xl: 60px;
+  --spacing-6xl: 80px;
+  
+  /* Border Radius */
+  --radius-sm: 15.61px;
+  --radius-md: 20px;
+  --radius-lg: 26.01px;
+  --radius-xl: 50px;
+  --radius-full: 866.95px;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 4px 4px 20px 0px rgba(102, 86, 140, 0.15);
+  --shadow-inset: inset 4px 4px 10px rgba(0, 0, 0, 0.25), inset 2px -2px 10px rgba(0, 0, 0, 0.05);
+  
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease;
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    font-family: var(--font-family-sans);
+    color: var(--color-text-primary);
+    line-height: var(--line-height-normal);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-serif);
+    font-weight: 400;
+    line-height: var(--line-height-tight);
+  }
+}
+
+/* ============================================
+   Component Utilities
+   ============================================ */
+@layer utilities {
+  .font-dm-sans {
+    font-family: var(--font-family-sans);
+  }
+  
+  .font-rem {
+    font-family: var(--font-family-serif);
+  }
+  
+  .text-moovdrop-primary {
+    color: var(--color-primary);
+  }
+  
+  .text-moovdrop-secondary {
+    color: var(--color-text-secondary);
+  }
+  
+  .text-moovdrop-tertiary {
+    color: var(--color-text-tertiary);
+  }
+  
+  .bg-moovdrop-primary {
+    background-color: var(--color-primary);
+  }
+  
+  .bg-moovdrop-primary-dark {
+    background-color: var(--color-primary-dark);
+  }
+  
+  .bg-moovdrop-primary-light {
+    background-color: var(--color-primary-light);
+  }
+  
+  .bg-moovdrop-accent {
+    background-color: var(--color-accent);
+  }
+  
+  .bg-moovdrop-cream {
+    background-color: var(--color-background-cream);
+  }
+  
+  .shadow-moovdrop {
+    box-shadow: var(--shadow-md);
+  }
+  
+  .shadow-moovdrop-inset {
+    box-shadow: var(--shadow-inset);
+  }
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  0%, 90%, to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+  30%, 60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
