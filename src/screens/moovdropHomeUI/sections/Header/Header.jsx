@@ -13,16 +13,15 @@ export const Header = () => {
 
       {/* Content Container */}
       <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-4">
-        {/* Decorative Icon - Top Right */}
-        <img
-          className="absolute top-4 right-4 w-12 h-12 sm:w-16 sm:h-16 md:w-[117px] md:h-[117px] z-20"
-          alt="Frame"
-          src="https://c.animaapp.com/F0ApqIw8/img/frame-2147236769.svg"
-        />
-
         {/* Main Heading */}
-        <h1 className="mt-12 sm:mt-20 md:mt-[99px] mb-6 sm:mb-8 heading-hero text-center px-4 z-10 max-w-[1100px]">
+        <h1 className="mt-12 sm:mt-20 md:mt-[99px] mb-6 sm:mb-8 heading-hero text-center px-4 z-10 max-w-[1100px] relative">
           Book Trusted Drivers in Minutes.
+          {/* Decorative Icon - Next to Title */}
+          <img
+            className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 md:-top-8 md:-right-12 w-16 h-16 sm:w-20 sm:h-20 md:w-32 md:h-32 z-20"
+            alt="Proudly Canadian"
+            src="https://c.animaapp.com/F0ApqIw8/img/frame-2147236769.svg"
+          />
         </h1>
 
         {/* Subheading */}
