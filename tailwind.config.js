@@ -53,6 +53,11 @@ module.exports = {
         "moovdrop-4xl": "var(--spacing-4xl)",
         "moovdrop-5xl": "var(--spacing-5xl)",
         "moovdrop-6xl": "var(--spacing-6xl)",
+        // Semantic spacing for common patterns
+        "section-y": "var(--spacing-6xl)", // 80px - vertical section padding
+        "section-x": "var(--spacing-5xl)", // 60px - horizontal section padding
+        "card-gap": "var(--spacing-2xl)", // 24px - gap between cards
+        "content-gap": "var(--spacing-lg)", // 16px - gap in content
       },
       borderRadius: {
         "moovdrop-sm": "var(--radius-sm)",

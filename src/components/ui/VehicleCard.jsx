@@ -19,7 +19,7 @@ export const VehicleCard = ({
 }) => {
   return (
     <div
-      className={`flex flex-col w-full bg-white rounded-moovdrop-md overflow-hidden border-4 border-solid border-moovdrop-primary-light hover:shadow-lg transition-shadow ${className}`}
+      className={`flex-col-start w-full bg-white rounded-moovdrop-md overflow-hidden border-4 border-solid border-moovdrop-primary-light hover:shadow-lg transition-shadow duration-moovdrop-base ${className}`}
     >
       {/* Vehicle Image Section */}
       <div className="relative w-full h-[172px] bg-moovdrop-primary-light overflow-hidden">
@@ -34,12 +34,12 @@ export const VehicleCard = ({
       </div>
 
       {/* Vehicle Details Section */}
-      <div className="flex flex-col w-full items-start gap-4 sm:gap-6 p-5 sm:p-6">
-        <h3 className="relative w-full font-rem font-normal text-text-primary text-2xl sm:text-3xl">
+      <div className="flex-col-start w-full gap-4 sm:gap-6 p-5 sm:p-6">
+        <h3 className="relative w-full heading-tertiary">
           {name}
         </h3>
 
-        <div className="flex flex-col items-start gap-4 relative self-stretch w-full">
+        <div className="flex-col-start gap-4 relative self-stretch w-full">
           {/* Specs Row */}
           <div className="flex items-start gap-4 sm:gap-6 relative self-stretch w-full">
             {/* Max Weight */}
@@ -49,11 +49,11 @@ export const VehicleCard = ({
                 alt="Weight icon"
                 src="https://c.animaapp.com/F0ApqIw8/img/vector-4.svg"
               />
-              <div className="flex flex-col items-start gap-1 min-w-0 flex-1">
-                <div className="font-dm-sans font-normal text-text-secondary text-xs whitespace-nowrap">
+              <div className="flex-col-start gap-1 min-w-0 flex-1">
+                <div className="label-small whitespace-nowrap">
                   Max Weight
                 </div>
-                <div className="font-dm-sans font-normal text-text-secondary text-xs break-words w-full">
+                <div className="label-small break-words w-full">
                   {maxWeight}
                 </div>
               </div>
@@ -66,11 +66,11 @@ export const VehicleCard = ({
                 alt="Size icon"
                 src="https://c.animaapp.com/F0ApqIw8/img/group-427321639-4@2x.png"
               />
-              <div className="flex flex-col items-start gap-1 min-w-0 flex-1">
-                <div className="font-dm-sans font-normal text-text-secondary text-xs whitespace-nowrap">
+              <div className="flex-col-start gap-1 min-w-0 flex-1">
+                <div className="label-small whitespace-nowrap">
                   Max Size
                 </div>
-                <p className="font-dm-sans font-normal text-text-secondary text-xs break-words w-full">
+                <p className="label-small break-words w-full">
                   {maxSize}
                 </p>
               </div>
@@ -78,7 +78,7 @@ export const VehicleCard = ({
           </div>
 
           {/* Suitable For Section */}
-          <p className="font-dm-sans font-normal text-text-secondary text-xs leading-relaxed w-full">
+          <p className="label-small leading-relaxed w-full">
             <span className="font-semibold">Suitable For:</span>
             <br />
             {suitableFor}

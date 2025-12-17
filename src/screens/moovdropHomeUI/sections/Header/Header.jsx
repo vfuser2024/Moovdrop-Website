@@ -12,7 +12,7 @@ export const Header = () => {
       />
 
       {/* Content Container */}
-      <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-4">
+      <div className="relative z-10 flex-col-center flex-1 px-4">
         {/* Decorative Icon - Top Right */}
         <img
           className="absolute top-4 right-4 md:right-[1271px] w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[117px] md:h-[117px] z-20"
@@ -21,7 +21,7 @@ export const Header = () => {
         />
 
         {/* Main Heading */}
-        <h1 className="mt-12 sm:mt-20 md:mt-[99px] mb-6 sm:mb-8 font-rem font-normal text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-center px-4 leading-tight sm:leading-snug md:leading-[67.4px] tracking-tight md:tracking-[-4px] z-10 max-w-[1100px]">
+        <h1 className="mt-12 sm:mt-20 md:mt-[99px] mb-6 sm:mb-8 heading-hero text-center px-4 z-10 max-w-[1100px]">
           Book Trusted Drivers in Minutes.
         </h1>
 
@@ -31,8 +31,8 @@ export const Header = () => {
         </p>
 
         {/* Search/Quote Box */}
-        <div className="flex flex-col sm:flex-row w-full max-w-[683px] items-center sm:justify-between gap-4 sm:gap-0 px-4 sm:px-6 md:px-9 py-4 md:py-[16.31px] bg-white rounded-moovdrop-md overflow-hidden shadow-moovdrop-inset z-10 mb-auto">
-          <div className="inline-flex items-center gap-4 sm:gap-6 md:gap-12 relative flex-[0_0_auto] min-w-0 w-full sm:w-auto">
+        <div className="flex-col sm:flex-row flex-center sm:flex-between w-full max-w-[683px] gap-4 sm:gap-0 px-4 sm:px-6 md:px-9 py-4 md:py-[16.31px] bg-white rounded-moovdrop-md overflow-hidden shadow-moovdrop-inset z-10 mb-auto">
+          <div className="flex-center gap-4 sm:gap-6 md:gap-12 relative flex-[0_0_auto] min-w-0 w-full sm:w-auto">
             <span className="font-dm-sans font-normal text-text-placeholder text-base sm:text-lg md:text-2xl tracking-[-0.61px] leading-[34.4px] whitespace-nowrap truncate">
               Select your desire vehicle
             </span>
@@ -57,7 +57,7 @@ export const Header = () => {
       </div>
 
       {/* Vehicle Fleet Image - Bottom */}
-      <div className="relative z-10 w-full flex justify-center">
+      <div className="relative z-10 w-full flex-center">
         <img
           className="w-full max-w-[1262px] h-auto aspect-[3.28] object-contain mt-auto"
           alt="White SUV fleet"

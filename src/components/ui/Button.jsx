@@ -18,7 +18,7 @@ export const Button = ({
   ...props
 }) => {
   const baseStyles =
-    "inline-flex items-center justify-center gap-2.5 transition-colors font-dm-sans font-bold text-center whitespace-nowrap";
+    "flex-center gap-2.5 transition-colors duration-moovdrop-base font-dm-sans font-bold text-center whitespace-nowrap";
 
   const variants = {
     primary:
@@ -30,9 +30,9 @@ export const Button = ({
   };
 
   const sizes = {
-    sm: "px-6 py-1.5 text-base tracking-[-0.40px] leading-[22.4px]",
-    md: "px-8 py-3 text-lg tracking-[-0.45px] leading-[25.2px]",
-    lg: "px-12 py-3 text-lg tracking-[-0.45px] leading-[25.2px]",
+    sm: "px-6 py-1.5 button-text-sm",
+    md: "px-8 py-3 button-text-md",
+    lg: "px-12 py-3 button-text-lg",
   };
 
   const combinedClassName = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;

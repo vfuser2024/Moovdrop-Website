@@ -15,15 +15,15 @@ export const Card = ({
   href,
   ...props
 }) => {
-  const baseStyles = "flex flex-col relative rounded-moovdrop-md";
+  const baseStyles = "flex-col-start relative rounded-moovdrop-md";
 
   const variants = {
     feature:
-      "items-start justify-between gap-[30px] px-8 md:px-12 py-9 bg-moovdrop-primary-light hover:opacity-90 transition-opacity",
+      "justify-between gap-moovdrop-3xl px-8 md:px-12 py-9 bg-moovdrop-primary-light hover:opacity-90 transition-opacity duration-moovdrop-base",
     elevated:
       "items-center gap-2.5 px-4 md:px-[78px] py-8 md:py-[45px] bg-white shadow-moovdrop",
     vehicle:
-      "bg-white rounded-moovdrop-md overflow-hidden border-4 border-solid border-moovdrop-primary-light hover:shadow-lg transition-shadow",
+      "bg-white overflow-hidden border-4 border-solid border-moovdrop-primary-light hover:shadow-lg transition-shadow duration-moovdrop-base",
   };
 
   const combinedClassName = `${baseStyles} ${variants[variant]} ${className}`;
@@ -54,18 +54,18 @@ export const Card = ({
  */
 export const CardHeader = ({ icon, title, description, className = "" }) => {
   return (
-    <div className={`flex flex-col items-start gap-[30px] w-full flex-1 ${className}`}>
+    <div className={`flex-col-start gap-moovdrop-3xl w-full flex-1 ${className}`}>
       {icon && (
         <img className="relative w-[70px] h-[70px]" alt="" src={icon} />
       )}
-      <div className="flex flex-col items-start justify-center gap-2 relative self-stretch w-full flex-[0_0_auto]">
+      <div className="flex-col-start justify-center gap-2 relative self-stretch w-full flex-[0_0_auto]">
         {title && (
           <h3 className="relative w-fit font-rem font-normal text-text-primary text-4xl text-center">
             {title}
           </h3>
         )}
         {description && (
-          <p className="relative self-stretch font-dm-sans font-normal text-text-primary text-xl">
+          <p className="relative self-stretch body-large">
             {description}
           </p>
         )}

@@ -49,24 +49,24 @@ export const FAQ = () => {
   };
 
   return (
-    <div className="flex flex-col items-center gap-8 md:gap-12 px-4 md:px-[124.84px] py-20 relative w-full">
-      <h2 className="font-rem font-normal text-text-primary text-3xl md:text-4xl lg:text-5xl text-center px-4 leading-tight md:leading-[55px]">
+    <div className="flex-col-center content-gap-lg section-padding-x section-padding-y relative w-full">
+      <h2 className="heading-primary text-center px-4 leading-tight md:leading-[55px]">
         Frequently Asked Question
       </h2>
 
-      <div className="flex flex-col items-center gap-2.5 px-4 md:px-[78px] py-8 md:py-[45px] relative w-full bg-white rounded-moovdrop-sm shadow-moovdrop">
-        <div className="flex flex-col w-full max-w-[812px] items-start gap-0 relative">
+      <div className="flex-col-center gap-2.5 px-4 md:px-[78px] py-8 md:py-[45px] relative w-full bg-white rounded-moovdrop-sm shadow-moovdrop">
+        <div className="flex-col-start w-full max-w-[812px] gap-0 relative">
           {faqData.map((item, index) => {
             const isOpen = openIndex === index;
             return (
               <div key={item.id} className="w-full">
                 <button
                   onClick={() => toggleItem(index)}
-                  className="flex items-center justify-between w-full py-4 px-0 text-left hover:bg-moovdrop-cream/30 transition-colors rounded"
+                  className="flex-between w-full py-4 px-0 text-left hover:bg-moovdrop-cream/30 transition-colors duration-moovdrop-base rounded"
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${item.id}`}
                 >
-                  <p className={`font-dm-sans font-bold text-base md:text-lg leading-snug pr-4 ${
+                  <p className={`label-bold leading-snug pr-4 ${
                     isOpen ? "text-moovdrop-primary" : "text-text-primary"
                   }`}>
                     {item.question}
@@ -97,7 +97,7 @@ export const FAQ = () => {
                   }`}
                 >
                   <div className="pb-4 pt-2">
-                    <p className="font-dm-sans font-normal text-text-secondary text-sm md:text-base leading-relaxed">
+                    <p className="body-base leading-relaxed">
                       {item.answer}
                     </p>
                   </div>

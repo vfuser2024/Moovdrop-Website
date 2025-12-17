@@ -4,14 +4,14 @@ import { quickLinks, supportLinks, socialLinks } from "../../../../data/navigati
 export const Footer = () => {
   return (
     <footer className="relative w-full bg-moovdrop-primary py-12 md:py-16">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 mb-8">
+      <div className="max-w-7xl mx-auto section-padding-x">
+        <div className="grid grid-cols-1 md:grid-cols-4 content-gap-lg mb-8">
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
             <div className="mb-4">
               <div className="w-[161.85px] h-[44.05px] bg-[url(https://c.animaapp.com/F0ApqIw8/img/screenshot-2025-11-24-at-10-51-18-pm-1@2x.png)] bg-cover bg-[50%_50%]" />
             </div>
-            <p className="font-dm-sans font-normal text-white text-sm md:text-base leading-relaxed max-w-md opacity-90">
+            <p className="body-base text-white leading-relaxed max-w-md opacity-90">
               MoovDrop - Your trusted partner for fast, reliable, and affordable delivery services.
               Book trusted drivers in minutes.
             </p>
@@ -19,13 +19,13 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-dm-sans font-bold text-white text-base md:text-lg mb-4">Quick Links</h3>
+            <h3 className="label-bold text-white mb-4">Quick Links</h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.id}>
                   <a
                     href={link.href}
-                    className="font-dm-sans font-normal text-white/80 text-sm md:text-base hover:text-white transition-colors duration-moovdrop-base"
+                    className="body-base text-white/80 hover:text-white transition-colors duration-moovdrop-base"
                   >
                     {link.label}
                   </a>
@@ -36,13 +36,13 @@ export const Footer = () => {
 
           {/* Support */}
           <div>
-            <h3 className="font-dm-sans font-bold text-white text-base md:text-lg mb-4">Support</h3>
+            <h3 className="label-bold text-white mb-4">Support</h3>
             <ul className="space-y-3">
               {supportLinks.map((link) => (
                 <li key={link.id}>
                   <a
                     href={link.href}
-                    className="font-dm-sans font-normal text-white/80 text-sm md:text-base hover:text-white transition-colors duration-moovdrop-base"
+                    className="body-base text-white/80 hover:text-white transition-colors duration-moovdrop-base"
                   >
                     {link.label}
                   </a>

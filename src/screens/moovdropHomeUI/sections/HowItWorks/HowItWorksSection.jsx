@@ -5,9 +5,9 @@ import { vehicles } from "../../../../data/vehicles";
 
 export const HowItWorksSection = () => {
   return (
-    <div className="flex flex-col max-w-[1300.42px] items-center relative w-full flex-[0_0_auto] overflow-visible mx-auto">
+    <div className="flex-col-center section-container relative flex-[0_0_auto] overflow-visible">
       {/* Feature Cards Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-20 pb-0 px-4 md:px-20 relative self-stretch w-full items-stretch">
+      <div className="grid-features pt-20 pb-0 section-padding-x relative self-stretch w-full items-stretch">
         {featureCards.map((feature) => (
           <Card key={feature.id} variant="feature" href={feature.link}>
             <CardHeader
@@ -21,37 +21,37 @@ export const HowItWorksSection = () => {
       </div>
 
       {/* Spacer */}
-      <div className="flex flex-col items-center justify-center gap-12 p-10 sm:p-16 md:p-20 relative self-stretch w-full flex-[0_0_auto]">
+      <div className="flex-col-center content-gap-lg p-10 sm:p-16 md:p-20 relative self-stretch w-full flex-[0_0_auto]">
         <div className="relative self-stretch w-full h-[200px] sm:h-[400px] md:h-[566px]" />
       </div>
 
       {/* Service Benefits Section */}
-      <div className="inline-flex flex-col items-start gap-2.5 pt-0 pb-20 px-0 relative flex-[0_0_auto] w-screen overflow-visible" style={{ marginLeft: 'calc((100vw - 100%) / -2)', marginRight: 'calc((100vw - 100%) / -2)', paddingLeft: 'calc((100vw - 100%) / 2)', paddingRight: 'calc((100vw - 100%) / 2)' }}>
-        <div className="inline-flex flex-col md:flex-row min-h-[787.71px] items-start gap-4 md:gap-2.5 px-4 md:px-20 py-8 md:py-[60px] relative bg-moovdrop-cream rounded-moovdrop-md overflow-visible w-full max-w-[1300.42px] mx-auto">
-          <div className="inline-flex flex-col items-start gap-8 md:gap-12 pt-[var(--size-space-600)] pb-[var(--size-space-600)] px-0 relative flex-[0_0_auto] w-full md:w-auto z-10">
-            <div className="inline-flex flex-col items-start gap-3 relative flex-[0_0_auto] w-full">
-              <div className="relative self-stretch font-dm-sans font-normal text-text-secondary text-lg md:text-xl">
+      <div className="flex-col-start gap-2.5 pt-0 pb-20 px-0 relative flex-[0_0_auto] w-screen overflow-visible" style={{ marginLeft: 'calc((100vw - 100%) / -2)', marginRight: 'calc((100vw - 100%) / -2)', paddingLeft: 'calc((100vw - 100%) / 2)', paddingRight: 'calc((100vw - 100%) / 2)' }}>
+        <div className="flex-col md:flex-row flex-start min-h-[787.71px] gap-4 md:gap-2.5 section-padding-x py-8 md:py-[60px] relative bg-moovdrop-cream rounded-moovdrop-md overflow-visible w-full section-container mx-auto">
+          <div className="flex-col-start content-gap-lg pt-[var(--size-space-600)] pb-[var(--size-space-600)] px-0 relative flex-[0_0_auto] w-full md:w-auto z-10">
+            <div className="flex-col-start gap-3 relative flex-[0_0_auto] w-full">
+              <div className="relative self-stretch body-large">
                 24/7 Delivery Services
               </div>
 
               <div className="relative w-full md:w-[542px] h-auto md:h-[55px]">
-                <h2 className="relative md:absolute top-0 left-0 font-rem font-normal text-text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight md:leading-[55px]">
+                <h2 className="relative md:absolute top-0 left-0 heading-primary leading-tight md:leading-[55px]">
                   Fast.&nbsp;&nbsp;Simple.&nbsp;&nbsp;Affordable.
                 </h2>
               </div>
             </div>
 
-            <div className="flex flex-col items-start gap-3.5 relative self-stretch w-full flex-[0_0_auto]">
+            <div className="flex-col-start gap-3.5 relative self-stretch w-full flex-[0_0_auto]">
               {serviceBenefits.map((benefit, index) => (
                 <div
                   key={benefit.id}
                   className={`inline-flex ${index === 0 ? 'min-h-[74.68px]' : 'h-[74.68px]'} justify-center pl-0 ${index === 0 ? 'pr-0 md:pr-[69.36px]' : 'pr-[69.36px]'} py-4 ${index > 0 ? 'border-t [border-top-style:solid] border-white' : ''} flex-col items-start relative w-full`}
                 >
-                  <div className={`relative w-fit ${index > 2 ? 'mt-[-4.66px]' : ''} ${index > 2 ? '[font-family:\'DM_Sans\',Helvetica]' : 'font-dm-sans'} font-bold ${index > 2 ? 'text-[#57555a]' : 'text-text-secondary'} text-lg md:text-xl ${index > 2 ? 'tracking-[-0.10px] leading-[28.0px]' : ''} whitespace-nowrap`}>
+                  <div className={`relative w-fit ${index > 2 ? 'mt-[-4.66px]' : ''} label-bold whitespace-nowrap`}>
                     {benefit.title}
                   </div>
 
-                  <p className={`relative w-full ${index < 2 ? 'md:w-[480px]' : 'sm:w-[480px]'} ${index > 2 ? 'mb-[-2.66px]' : ''} ${index > 2 ? '[font-family:\'DM_Sans\',Helvetica]' : 'font-dm-sans'} font-normal ${index > 2 ? 'text-[#999999]' : 'text-text-tertiary'} text-sm md:text-base ${index > 2 ? 'tracking-[-0.08px] leading-[22.4px]' : ''}`}>
+                  <p className={`relative w-full ${index < 2 ? 'md:w-[480px]' : 'sm:w-[480px]'} ${index > 2 ? 'mb-[-2.66px]' : ''} body-base`}>
                     {benefit.description}
                   </p>
                 </div>
@@ -85,8 +85,8 @@ export const HowItWorksSection = () => {
       </div>
 
       {/* How It Works Steps Section */}
-      <div className="flex flex-col md:flex-row w-full min-h-[792px] items-center justify-center gap-8 md:gap-14 px-4 md:px-0 py-20 relative bg-moovdrop-primary-dark">
-        <div className="flex flex-col w-full md:w-[359px] h-auto md:h-[563px] items-start justify-center gap-[8.67px] p-[8.67px] relative rounded-[26.01px] overflow-hidden">
+      <div className="flex-col md:flex-row flex-center w-full min-h-[792px] gap-8 md:gap-14 px-4 md:px-0 section-padding-y relative bg-moovdrop-primary-dark">
+        <div className="flex-col-center w-full md:w-[359px] h-auto md:h-[563px] gap-[8.67px] p-[8.67px] relative rounded-[26.01px] overflow-hidden">
           <img
             className="relative w-full max-w-[265px] h-auto md:h-[551px] mt-[-2.67px] mb-[-2.67px] aspect-[0.48] object-contain mx-auto md:mx-0"
             alt="Screenshot"
@@ -94,16 +94,16 @@ export const HowItWorksSection = () => {
           />
         </div>
 
-        <div className="flex flex-col w-full md:w-[489px] items-start gap-8 md:gap-12 pt-[var(--size-space-600)] pb-[var(--size-space-600)] px-4 md:px-0 relative">
-          <div className="flex flex-col items-start gap-[34.68px] pl-0 pr-0 md:pr-[69.36px] py-0 relative self-stretch w-full flex-[0_0_auto]">
-            <h2 className="relative w-full md:w-[581px] font-rem font-normal text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight sm:leading-snug md:leading-[55px]">
+        <div className="flex-col-start w-full md:w-[489px] content-gap-lg pt-[var(--size-space-600)] pb-[var(--size-space-600)] px-4 md:px-0 relative">
+          <div className="flex-col-start gap-[34.68px] pl-0 pr-0 md:pr-[69.36px] py-0 relative self-stretch w-full flex-[0_0_auto]">
+            <h2 className="relative w-full md:w-[581px] heading-primary text-white leading-tight sm:leading-snug md:leading-[55px]">
               Moving service connected
               <br />
               to your needs
             </h2>
           </div>
 
-          <div className="flex w-full md:w-[473px] flex-[0_0_auto] flex-col items-start relative">
+          <div className="flex-col-start w-full md:w-[473px] flex-[0_0_auto] relative">
             {howItWorksSteps.map((step, index) => (
               <div
                 key={step.id}
@@ -139,14 +139,14 @@ export const HowItWorksSection = () => {
       </div>
 
       {/* Download App Section */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-[60px] px-4 md:px-[68px] py-20 relative self-stretch w-full flex-[0_0_auto]">
-        <div className="flex flex-col w-full md:w-[486px] items-start gap-8 md:gap-12 relative">
-          <div className="flex flex-col items-start gap-3 relative self-stretch w-full flex-[0_0_auto]">
-            <h2 className="relative self-stretch font-rem font-normal text-text-primary text-3xl md:text-4xl lg:text-5xl">
+      <div className="flex-col md:flex-row flex-center gap-8 md:gap-[60px] px-4 md:px-[68px] section-padding-y relative self-stretch w-full flex-[0_0_auto]">
+        <div className="flex-col-start w-full md:w-[486px] content-gap-lg relative">
+          <div className="flex-col-start gap-3 relative self-stretch w-full flex-[0_0_auto]">
+            <h2 className="relative self-stretch heading-primary">
               Ready to get started?
             </h2>
 
-            <p className="relative self-stretch font-dm-sans font-normal text-text-primary text-lg md:text-xl">
+            <p className="relative self-stretch body-large">
               Download our APP today to get your deliveries going places.
             </p>
           </div>
@@ -176,12 +176,12 @@ export const HowItWorksSection = () => {
       </div>
 
       {/* Vehicle Types Section */}
-      <div className="flex flex-col items-center gap-8 md:gap-12 px-4 md:px-20 py-20 relative self-stretch w-full flex-[0_0_auto] max-w-[1300.42px] mx-auto">
-        <h2 className="relative w-full font-rem font-normal text-text-primary text-3xl md:text-4xl lg:text-5xl text-center">
+      <div className="flex-col-center content-gap-lg section-padding relative self-stretch w-full flex-[0_0_auto] section-container">
+        <h2 className="relative w-full heading-primary text-center">
           Find your desire vehicle type
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-[35px] relative w-full">
+        <div className="grid-cards relative w-full">
           {vehicles.map((vehicle) => (
             <VehicleCard key={vehicle.id} {...vehicle} />
           ))}

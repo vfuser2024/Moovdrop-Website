@@ -103,53 +103,175 @@
 }
 
 /* ============================================
-   Component Utilities
+   Component Utilities - Typography
+   ============================================ */
+@layer components {
+  /* Heading Styles */
+  .heading-hero {
+    @apply font-rem font-normal text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight sm:leading-snug md:leading-[67.4px] tracking-tight md:tracking-[-4px];
+  }
+
+  .heading-primary {
+    @apply font-rem font-normal text-text-primary text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  .heading-secondary {
+    @apply font-rem font-normal text-text-primary text-2xl sm:text-3xl md:text-4xl;
+  }
+
+  .heading-tertiary {
+    @apply font-rem font-normal text-text-primary text-2xl sm:text-3xl;
+  }
+
+  /* Body Text Styles */
+  .body-large {
+    @apply font-dm-sans font-normal text-text-primary text-lg md:text-xl;
+  }
+
+  .body-base {
+    @apply font-dm-sans font-normal text-text-secondary text-sm md:text-base;
+  }
+
+  .body-small {
+    @apply font-dm-sans font-normal text-text-secondary text-xs;
+  }
+
+  /* Label/Caption Styles */
+  .label-bold {
+    @apply font-dm-sans font-bold text-text-secondary text-base md:text-lg;
+  }
+
+  .label-small {
+    @apply font-dm-sans font-normal text-text-secondary text-xs;
+  }
+
+  /* Navigation/Button Text */
+  .nav-text {
+    @apply font-dm-sans font-normal text-white text-base tracking-[-0.40px] leading-[22.4px];
+  }
+
+  .button-text-lg {
+    @apply font-dm-sans font-normal text-lg tracking-[-0.45px] leading-[25.2px];
+  }
+
+  .button-text-md {
+    @apply font-dm-sans font-normal text-lg tracking-[-0.45px] leading-[25.2px];
+  }
+
+  .button-text-sm {
+    @apply font-dm-sans font-normal text-base tracking-[-0.40px] leading-[22.4px];
+  }
+}
+
+/* ============================================
+   Component Utilities - Layout
+   ============================================ */
+@layer components {
+  /* Flexbox Patterns */
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+
+  .flex-start {
+    @apply flex items-start justify-start;
+  }
+
+  .flex-col-center {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  .flex-col-start {
+    @apply flex flex-col items-start;
+  }
+
+  /* Grid Patterns */
+  .grid-cards {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-card-gap;
+  }
+
+  .grid-features {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+  }
+
+  /* Section Containers */
+  .section-container {
+    @apply max-w-[1300.42px] mx-auto w-full;
+  }
+
+  .section-padding {
+    @apply px-4 md:px-20 py-20;
+  }
+
+  .section-padding-y {
+    @apply py-20;
+  }
+
+  .section-padding-x {
+    @apply px-4 md:px-20;
+  }
+
+  /* Content Spacing */
+  .content-gap {
+    @apply gap-content-gap;
+  }
+
+  .content-gap-lg {
+    @apply gap-8 md:gap-12;
+  }
+}
+
+/* ============================================
+   Utility Classes
    ============================================ */
 @layer utilities {
   .font-dm-sans {
     font-family: var(--font-family-sans);
   }
-  
+
   .font-rem {
     font-family: var(--font-family-serif);
   }
-  
+
   .text-moovdrop-primary {
     color: var(--color-primary);
   }
-  
+
   .text-moovdrop-secondary {
     color: var(--color-text-secondary);
   }
-  
+
   .text-moovdrop-tertiary {
     color: var(--color-text-tertiary);
   }
-  
+
   .bg-moovdrop-primary {
     background-color: var(--color-primary);
   }
-  
+
   .bg-moovdrop-primary-dark {
     background-color: var(--color-primary-dark);
   }
-  
+
   .bg-moovdrop-primary-light {
     background-color: var(--color-primary-light);
   }
-  
+
   .bg-moovdrop-accent {
     background-color: var(--color-accent);
   }
-  
+
   .bg-moovdrop-cream {
     background-color: var(--color-background-cream);
   }
-  
+
   .shadow-moovdrop {
     box-shadow: var(--shadow-md);
   }
-  
+
   .shadow-moovdrop-inset {
     box-shadow: var(--shadow-inset);
   }
