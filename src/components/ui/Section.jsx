@@ -1,11 +1,8 @@
 import React from "react";
 
 /**
- * Reusable Section component for consistent section layouts
- * @param {string} variant - Section style variant: 'default', 'dark', 'cream'
- * @param {string} className - Additional custom classes
- * @param {React.ReactNode} children - Section content
- * @param {object} props - Additional props
+ * @deprecated Use Section from components/layout instead
+ * Keeping for backwards compatibility
  */
 export const Section = ({
   variant = "default",
@@ -36,9 +33,7 @@ export const Section = ({
  */
 export const SectionHeading = ({ children, className = "" }) => {
   return (
-    <h2
-      className={`font-rem font-normal text-text-primary text-3xl md:text-4xl lg:text-5xl text-center px-4 ${className}`}
-    >
+    <h2 className={`heading-primary text-center px-4 ${className}`}>
       {children}
     </h2>
   );
@@ -49,16 +44,15 @@ export const SectionHeading = ({ children, className = "" }) => {
  */
 export const SectionSubheading = ({ children, className = "" }) => {
   return (
-    <p
-      className={`font-dm-sans font-normal text-text-secondary text-lg md:text-xl ${className}`}
-    >
+    <p className={`body-large ${className}`}>
       {children}
     </p>
   );
 };
 
 /**
- * Container component for consistent max-width containers
+ * @deprecated Use Container from components/layout instead
+ * Keeping for backwards compatibility
  */
 export const Container = ({ maxWidth = "7xl", className = "", children }) => {
   const maxWidths = {
@@ -68,7 +62,7 @@ export const Container = ({ maxWidth = "7xl", className = "", children }) => {
     xl: "max-w-screen-xl",
     "2xl": "max-w-screen-2xl",
     "7xl": "max-w-7xl",
-    custom: "max-w-[1300.42px]",
+    custom: "max-w-container",
   };
 
   return (

@@ -19,41 +19,41 @@ export const VehicleCard = ({
 }) => {
   return (
     <div
-      className={`flex-col-start w-full bg-white rounded-moovdrop-md overflow-hidden border-4 border-solid border-moovdrop-primary-light hover:shadow-lg transition-shadow duration-moovdrop-base ${className}`}
+      className={`flex flex-col items-start w-full bg-white rounded-moovdrop-md overflow-hidden border-4 border-solid border-moovdrop-primary-light hover:shadow-lg transition-shadow duration-200 ${className}`}
     >
       {/* Vehicle Image Section */}
-      <div className="relative w-full h-[172px] bg-moovdrop-primary-light overflow-hidden">
-        <div className="absolute top-[17px] left-[26px] mix-blend-multiply font-dm-sans font-normal text-moovdrop-primary-light text-4xl sm:text-5xl md:text-6xl whitespace-nowrap">
+      <div className="relative w-full h-44 bg-moovdrop-primary-light overflow-hidden">
+        <div className="absolute top-4 left-6 mix-blend-multiply font-sans font-normal text-moovdrop-primary-light text-4xl sm:text-5xl md:text-6xl whitespace-nowrap">
           {name}
         </div>
         <img
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto h-auto max-w-[75%] max-h-[140px] sm:max-h-[160px] object-contain"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto h-auto max-w-[75%] max-h-36 sm:max-h-40 object-contain"
           alt={name}
           src={image}
         />
       </div>
 
       {/* Vehicle Details Section */}
-      <div className="flex-col-start w-full gap-4 sm:gap-6 p-5 sm:p-6">
-        <h3 className="relative w-full heading-tertiary">
+      <div className="flex flex-col items-start w-full gap-4 sm:gap-6 p-5 sm:p-6">
+        <h3 className="heading-secondary w-full">
           {name}
         </h3>
 
-        <div className="flex-col-start gap-4 relative self-stretch w-full">
+        <div className="flex flex-col items-start gap-4 w-full">
           {/* Specs Row */}
-          <div className="flex items-start gap-4 sm:gap-6 relative self-stretch w-full">
+          <div className="flex items-start gap-4 sm:gap-6 w-full">
             {/* Max Weight */}
             <div className="flex flex-1 items-start gap-2 min-w-0">
               <img
-                className="relative w-3.5 h-3.5 flex-shrink-0 mt-0.5"
+                className="w-3.5 h-3.5 flex-shrink-0 mt-0.5"
                 alt="Weight icon"
                 src="https://c.animaapp.com/F0ApqIw8/img/vector-4.svg"
               />
-              <div className="flex-col-start gap-1 min-w-0 flex-1">
-                <div className="label-small whitespace-nowrap">
+              <div className="flex flex-col items-start gap-1 min-w-0 flex-1">
+                <div className="font-sans text-xs text-text-secondary whitespace-nowrap">
                   Max Weight
                 </div>
-                <div className="label-small break-words w-full">
+                <div className="font-sans text-xs text-text-secondary break-words w-full">
                   {maxWeight}
                 </div>
               </div>
@@ -62,15 +62,15 @@ export const VehicleCard = ({
             {/* Max Size */}
             <div className="flex flex-1 items-start gap-2 min-w-0">
               <img
-                className="relative w-3.5 h-[14.02px] flex-shrink-0 mt-0.5"
+                className="w-3.5 h-3.5 flex-shrink-0 mt-0.5"
                 alt="Size icon"
                 src="https://c.animaapp.com/F0ApqIw8/img/group-427321639-4@2x.png"
               />
-              <div className="flex-col-start gap-1 min-w-0 flex-1">
-                <div className="label-small whitespace-nowrap">
+              <div className="flex flex-col items-start gap-1 min-w-0 flex-1">
+                <div className="font-sans text-xs text-text-secondary whitespace-nowrap">
                   Max Size
                 </div>
-                <p className="label-small break-words w-full">
+                <p className="font-sans text-xs text-text-secondary break-words w-full">
                   {maxSize}
                 </p>
               </div>
@@ -78,7 +78,7 @@ export const VehicleCard = ({
           </div>
 
           {/* Suitable For Section */}
-          <p className="label-small leading-relaxed w-full">
+          <p className="font-sans text-xs text-text-secondary leading-relaxed w-full">
             <span className="font-semibold">Suitable For:</span>
             <br />
             {suitableFor}

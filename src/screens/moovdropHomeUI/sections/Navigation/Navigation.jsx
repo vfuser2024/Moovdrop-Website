@@ -6,13 +6,13 @@ const navLinks = quickLinks.slice(0, 3); // Use first 3 links for nav
 
 export const Navigation = () => {
   return (
-    <nav className="flex-col md:flex-row flex-between pt-6 pb-12 section-padding-x relative w-full bg-moovdrop-primary gap-4">
-      <div className="flex-col md:flex-row flex-center w-full md:w-auto md:max-w-[753.65px] gap-4 md:gap-[88px] relative">
+    <nav className="flex flex-col md:flex-row items-center justify-between pt-6 pb-12 px-4 md:px-20 w-full bg-moovdrop-primary gap-4">
+      <div className="flex flex-col md:flex-row items-center justify-center w-full md:w-auto md:max-w-3xl gap-4 md:gap-22">
         {/* Logo */}
-        <div className="relative w-[161.85px] h-[44.05px] bg-[url(https://c.animaapp.com/F0ApqIw8/img/screenshot-2025-11-24-at-10-51-18-pm-1@2x.png)] bg-cover bg-[50%_50%]" />
+        <div className="w-40 h-11 bg-[url(https://c.animaapp.com/F0ApqIw8/img/screenshot-2025-11-24-at-10-51-18-pm-1@2x.png)] bg-cover bg-center" />
 
         {/* Navigation Links */}
-        <div className="flex-center gap-4 md:gap-9 relative flex-wrap">
+        <div className="flex items-center justify-center gap-4 md:gap-9 flex-wrap">
           {navLinks.map((link) => (
             <Button key={link.id} variant="nav" size="sm">
               {link.label}

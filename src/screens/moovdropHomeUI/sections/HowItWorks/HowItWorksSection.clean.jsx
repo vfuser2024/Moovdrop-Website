@@ -48,7 +48,7 @@ export const HowItWorksSection = () => {
               <Stack spacing="lg" className="w-full md:w-1/2 px-4 md:px-20 z-10">
                 <Stack spacing="xs">
                   <p className="body-large">24/7 Delivery Services</p>
-                  <h2 className="heading-primary leading-tight md:leading-[55px] whitespace-nowrap">
+                  <h2 className="heading-primary leading-tight md:leading-[55px]">
                     Fast.&nbsp;&nbsp;Simple.&nbsp;&nbsp;Affordable.
                   </h2>
                 </Stack>
@@ -61,7 +61,7 @@ export const HowItWorksSection = () => {
             </Stack>
 
             {/* Floating Image - Desktop */}
-            <div className="hidden md:block absolute right-0 top-36 w-[450px] h-[390px] lg:w-[550px] lg:h-[480px] xl:w-[665px] xl:h-[580px] z-30 pointer-events-none">
+            <div className="hidden md:block absolute right-0 top-24 w-[576px] h-[502px] z-30 pointer-events-none">
               <img
                 className="w-full h-full object-cover drop-shadow-2xl"
                 alt="Service Image"

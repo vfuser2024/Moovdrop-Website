@@ -18,7 +18,7 @@ export const Button = ({
   ...props
 }) => {
   const baseStyles =
-    "flex-center gap-2.5 transition-colors duration-moovdrop-base font-dm-sans font-bold text-center whitespace-nowrap";
+    "flex items-center justify-center gap-2.5 transition-colors duration-200 font-sans font-bold text-center whitespace-nowrap";
 
   const variants = {
     primary:
@@ -30,9 +30,9 @@ export const Button = ({
   };
 
   const sizes = {
-    sm: "px-6 py-1.5 button-text-sm",
-    md: "px-8 py-3 button-text-md",
-    lg: "px-12 py-3 button-text-lg",
+    sm: "px-6 py-1.5 text-base",
+    md: "px-8 py-3 text-lg",
+    lg: "px-12 py-3 text-lg",
   };
 
   const combinedClassName = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;

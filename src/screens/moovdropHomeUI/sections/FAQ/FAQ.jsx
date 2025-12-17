@@ -49,20 +49,20 @@ export const FAQ = () => {
   };
 
   return (
-    <div className="flex-col-center content-gap-lg section-padding-x section-padding-y relative w-full">
+    <div className="flex flex-col items-center gap-8 md:gap-12 px-4 md:px-20 py-20 w-full">
       <h2 className="heading-primary text-center px-4 leading-tight md:leading-[55px]">
         Frequently Asked Question
       </h2>
 
-      <div className="flex-col-center gap-2.5 px-4 md:px-[78px] py-8 md:py-[45px] relative w-full bg-white rounded-moovdrop-sm shadow-moovdrop">
-        <div className="flex-col-start w-full max-w-[812px] gap-0 relative">
+      <div className="flex flex-col items-center gap-2.5 px-4 md:px-20 py-8 md:py-12 w-full max-w-3xl">
+        <div className="flex flex-col items-start w-full gap-0">
           {faqData.map((item, index) => {
             const isOpen = openIndex === index;
             return (
               <div key={item.id} className="w-full">
                 <button
                   onClick={() => toggleItem(index)}
-                  className="flex-between w-full py-4 px-0 text-left hover:bg-moovdrop-cream/30 transition-colors duration-moovdrop-base rounded"
+                  className="flex items-center justify-between w-full py-4 px-0 text-left hover:bg-moovdrop-cream/30 transition-colors duration-200 rounded"
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${item.id}`}
                 >
@@ -73,7 +73,7 @@ export const FAQ = () => {
                   </p>
                   <div className="flex-shrink-0">
                     <svg
-                      className={`w-4 h-4 transition-transform duration-moovdrop-base ${
+                      className={`w-4 h-4 transition-transform duration-200 ${
                         isOpen ? "rotate-180" : ""
                       } ${isOpen ? "text-moovdrop-primary" : "text-text-secondary"}`}
                       fill="none"
@@ -92,7 +92,7 @@ export const FAQ = () => {
 
                 <div
                   id={`faq-answer-${item.id}`}
-                  className={`overflow-hidden transition-all duration-moovdrop-slow ease-in-out ${
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
                     isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >

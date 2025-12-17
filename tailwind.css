@@ -3,84 +3,6 @@
 @tailwind utilities;
 
 /* ============================================
-   MoovDrop Design System - CSS Variables
-   ============================================ */
-:root {
-  /* Brand Colors */
-  --color-primary: #7048ce;
-  --color-primary-dark: #381e61;
-  --color-primary-light: #cdc6f9;
-  --color-accent: #d97b00;
-  --color-accent-dark: #c06d00;
-  --color-background: #ffffff;
-  --color-background-cream: #f0ede2;
-  --color-background-dark: #001f3e;
-  
-  /* Text Colors */
-  --color-text-primary: #1e1d1f;
-  --color-text-secondary: #57555a;
-  --color-text-tertiary: #999999;
-  --color-text-placeholder: #aaaaaa;
-  --color-text-white: #ffffff;
-  
-  /* Typography */
-  --font-family-sans: "DM Sans", Helvetica, Arial, sans-serif;
-  --font-family-serif: "REM", Helvetica, Arial, sans-serif;
-  
-  /* Font Sizes */
-  --font-size-xs: 13px;
-  --font-size-sm: 14px;
-  --font-size-base: 16px;
-  --font-size-lg: 18px;
-  --font-size-xl: 20px;
-  --font-size-2xl: 24px;
-  --font-size-3xl: 32px;
-  --font-size-4xl: 36px;
-  --font-size-5xl: 50px;
-  --font-size-6xl: 69.4px;
-  --font-size-7xl: 80px;
-  
-  /* Line Heights */
-  --line-height-tight: 1.1;
-  --line-height-normal: 1.4;
-  --line-height-relaxed: 1.6;
-  
-  /* Letter Spacing */
-  --letter-spacing-tight: -0.48px;
-  --letter-spacing-normal: -0.40px;
-  --letter-spacing-wide: -0.35px;
-  
-  /* Spacing Scale */
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-md: 12px;
-  --spacing-lg: 16px;
-  --spacing-xl: 20px;
-  --spacing-2xl: 24px;
-  --spacing-3xl: 30px;
-  --spacing-4xl: 40px;
-  --spacing-5xl: 60px;
-  --spacing-6xl: 80px;
-  
-  /* Border Radius */
-  --radius-sm: 15.61px;
-  --radius-md: 20px;
-  --radius-lg: 26.01px;
-  --radius-xl: 50px;
-  --radius-full: 866.95px;
-  
-  /* Shadows */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --shadow-md: 4px 4px 20px 0px rgba(102, 86, 140, 0.15);
-  --shadow-inset: inset 4px 4px 10px rgba(0, 0, 0, 0.25), inset 2px -2px 10px rgba(0, 0, 0, 0.05);
-  
-  /* Transitions */
-  --transition-fast: 150ms ease;
-  --transition-base: 200ms ease;
-  --transition-slow: 300ms ease;
-}
-
-/* ============================================
    Base Styles
    ============================================ */
 @layer base {
@@ -88,17 +10,13 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
   body {
-    font-family: var(--font-family-sans);
-    color: var(--color-text-primary);
-    line-height: var(--line-height-normal);
+    @apply font-sans text-text-primary;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-family-serif);
-    font-weight: 400;
-    line-height: var(--line-height-tight);
+    @apply font-serif font-normal;
   }
 }
 
@@ -108,58 +26,29 @@
 @layer components {
   /* Heading Styles */
   .heading-hero {
-    @apply font-rem font-normal text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight sm:leading-snug md:leading-[67.4px] tracking-tight md:tracking-[-4px];
+    @apply font-serif font-normal text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl;
   }
 
   .heading-primary {
-    @apply font-rem font-normal text-text-primary text-3xl md:text-4xl lg:text-5xl;
+    @apply font-serif font-normal text-text-primary text-3xl md:text-4xl lg:text-5xl;
   }
 
   .heading-secondary {
-    @apply font-rem font-normal text-text-primary text-2xl sm:text-3xl md:text-4xl;
-  }
-
-  .heading-tertiary {
-    @apply font-rem font-normal text-text-primary text-2xl sm:text-3xl;
+    @apply font-serif font-normal text-text-primary text-2xl sm:text-3xl md:text-4xl;
   }
 
   /* Body Text Styles */
   .body-large {
-    @apply font-dm-sans font-normal text-text-primary text-lg md:text-xl;
+    @apply font-sans font-normal text-text-primary text-lg md:text-xl;
   }
 
   .body-base {
-    @apply font-dm-sans font-normal text-text-secondary text-sm md:text-base;
-  }
-
-  .body-small {
-    @apply font-dm-sans font-normal text-text-secondary text-xs;
+    @apply font-sans font-normal text-text-secondary text-sm md:text-base;
   }
 
   /* Label/Caption Styles */
   .label-bold {
-    @apply font-dm-sans font-bold text-text-secondary text-base md:text-lg;
-  }
-
-  .label-small {
-    @apply font-dm-sans font-normal text-text-secondary text-xs;
-  }
-
-  /* Navigation/Button Text */
-  .nav-text {
-    @apply font-dm-sans font-normal text-white text-base tracking-[-0.40px] leading-[22.4px];
-  }
-
-  .button-text-lg {
-    @apply font-dm-sans font-normal text-lg tracking-[-0.45px] leading-[25.2px];
-  }
-
-  .button-text-md {
-    @apply font-dm-sans font-normal text-lg tracking-[-0.45px] leading-[25.2px];
-  }
-
-  .button-text-sm {
-    @apply font-dm-sans font-normal text-base tracking-[-0.40px] leading-[22.4px];
+    @apply font-sans font-bold text-text-secondary text-base md:text-lg;
   }
 }
 
@@ -167,115 +56,12 @@
    Component Utilities - Layout
    ============================================ */
 @layer components {
-  /* Flexbox Patterns */
-  .flex-center {
-    @apply flex items-center justify-center;
-  }
-
-  .flex-between {
-    @apply flex items-center justify-between;
-  }
-
-  .flex-start {
-    @apply flex items-start justify-start;
-  }
-
-  .flex-col-center {
-    @apply flex flex-col items-center justify-center;
-  }
-
-  .flex-col-start {
-    @apply flex flex-col items-start;
-  }
-
   /* Grid Patterns */
-  .grid-cards {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-card-gap;
-  }
-
   .grid-features {
     @apply grid grid-cols-1 md:grid-cols-3 gap-6;
   }
-
-  /* Section Containers */
-  .section-container {
-    @apply max-w-[1300.42px] mx-auto w-full;
-  }
-
-  .section-padding {
-    @apply px-4 md:px-20 py-20;
-  }
-
-  .section-padding-y {
-    @apply py-20;
-  }
-
-  .section-padding-x {
-    @apply px-4 md:px-20;
-  }
-
-  /* Content Spacing */
-  .content-gap {
-    @apply gap-content-gap;
-  }
-
-  .content-gap-lg {
-    @apply gap-8 md:gap-12;
-  }
 }
 
-/* ============================================
-   Utility Classes
-   ============================================ */
-@layer utilities {
-  .font-dm-sans {
-    font-family: var(--font-family-sans);
-  }
-
-  .font-rem {
-    font-family: var(--font-family-serif);
-  }
-
-  .text-moovdrop-primary {
-    color: var(--color-primary);
-  }
-
-  .text-moovdrop-secondary {
-    color: var(--color-text-secondary);
-  }
-
-  .text-moovdrop-tertiary {
-    color: var(--color-text-tertiary);
-  }
-
-  .bg-moovdrop-primary {
-    background-color: var(--color-primary);
-  }
-
-  .bg-moovdrop-primary-dark {
-    background-color: var(--color-primary-dark);
-  }
-
-  .bg-moovdrop-primary-light {
-    background-color: var(--color-primary-light);
-  }
-
-  .bg-moovdrop-accent {
-    background-color: var(--color-accent);
-  }
-
-  .bg-moovdrop-cream {
-    background-color: var(--color-background-cream);
-  }
-
-  .shadow-moovdrop {
-    box-shadow: var(--shadow-md);
-  }
-
-  .shadow-moovdrop-inset {
-    box-shadow: var(--shadow-inset);
-  }
-}
 
 /* ============================================
    Animations

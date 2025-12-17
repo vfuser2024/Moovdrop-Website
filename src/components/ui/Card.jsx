@@ -15,15 +15,15 @@ export const Card = ({
   href,
   ...props
 }) => {
-  const baseStyles = "flex-col-start relative rounded-moovdrop-md";
+  const baseStyles = "flex flex-col items-start relative rounded-moovdrop-md";
 
   const variants = {
     feature:
-      "justify-between gap-moovdrop-3xl px-8 md:px-12 py-9 bg-moovdrop-primary-light hover:opacity-90 transition-opacity duration-moovdrop-base",
+      "justify-between gap-8 px-8 md:px-12 py-9 bg-moovdrop-primary-light hover:opacity-90 transition-opacity duration-200",
     elevated:
-      "items-center gap-2.5 px-4 md:px-[78px] py-8 md:py-[45px] bg-white shadow-moovdrop",
+      "items-center gap-2.5 px-4 md:px-20 py-8 md:py-12 bg-white shadow-moovdrop",
     vehicle:
-      "bg-white overflow-hidden border-4 border-solid border-moovdrop-primary-light hover:shadow-lg transition-shadow duration-moovdrop-base",
+      "bg-white overflow-hidden border-4 border-solid border-moovdrop-primary-light hover:shadow-lg transition-shadow duration-200",
   };
 
   const combinedClassName = `${baseStyles} ${variants[variant]} ${className}`;
@@ -54,18 +54,18 @@ export const Card = ({
  */
 export const CardHeader = ({ icon, title, description, className = "" }) => {
   return (
-    <div className={`flex-col-start gap-moovdrop-3xl w-full flex-1 ${className}`}>
+    <div className={`flex flex-col items-start gap-8 w-full flex-1 ${className}`}>
       {icon && (
-        <img className="relative w-[70px] h-[70px]" alt="" src={icon} />
+        <img className="w-[70px] h-[70px]" alt="" src={icon} />
       )}
-      <div className="flex-col-start justify-center gap-2 relative self-stretch w-full flex-[0_0_auto]">
+      <div className="flex flex-col items-start justify-center gap-2 w-full">
         {title && (
-          <h3 className="relative w-fit font-rem font-normal text-text-primary text-4xl text-center">
+          <h3 className="font-serif font-normal text-text-primary text-4xl">
             {title}
           </h3>
         )}
         {description && (
-          <p className="relative self-stretch body-large">
+          <p className="body-large w-full">
             {description}
           </p>
         )}
@@ -79,7 +79,7 @@ export const CardHeader = ({ icon, title, description, className = "" }) => {
  */
 export const CardFooter = ({ children, className = "" }) => {
   return (
-    <div className={`relative self-stretch font-dm-sans font-normal text-moovdrop-primary text-base ${className}`}>
+    <div className={`font-sans font-normal text-moovdrop-primary text-base w-full ${className}`}>
       {children}
     </div>
   );

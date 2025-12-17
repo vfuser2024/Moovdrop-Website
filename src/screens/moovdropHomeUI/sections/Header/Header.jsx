@@ -6,13 +6,13 @@ export const Header = () => {
     <header className="relative w-full min-h-[795px] bg-moovdrop-primary overflow-hidden flex flex-col">
       {/* Background Layer */}
       <img
-        className="absolute w-full max-w-[1441px] h-[801px] top-[-38px] left-0 object-cover z-0"
+        className="absolute w-full h-full min-h-[795px] top-0 left-0 object-cover z-0"
         alt="Layer"
         src="https://c.animaapp.com/F0ApqIw8/img/layer1.png"
       />
 
       {/* Content Container */}
-      <div className="relative z-10 flex-col-center flex-1 px-4">
+      <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-4">
         {/* Decorative Icon - Top Right */}
         <img
           className="absolute top-4 right-4 md:right-[1271px] w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[117px] md:h-[117px] z-20"
@@ -26,14 +26,14 @@ export const Header = () => {
         </h1>
 
         {/* Subheading */}
-        <p className="mb-8 sm:mb-12 font-dm-sans font-normal text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center tracking-tight md:tracking-[-1.20px] leading-relaxed sm:leading-[31.5px] px-4 max-w-[943px] z-10">
+        <p className="mb-8 sm:mb-12 font-sans font-normal text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center tracking-tight md:tracking-[-1.20px] leading-relaxed sm:leading-[31.5px] px-4 max-w-[943px] z-10">
           Join MoovDrop - like ride sharing, but for moving items instead of people.
         </p>
 
         {/* Search/Quote Box */}
-        <div className="flex-col sm:flex-row flex-center sm:flex-between w-full max-w-[683px] gap-4 sm:gap-0 px-4 sm:px-6 md:px-9 py-4 md:py-[16.31px] bg-white rounded-moovdrop-md overflow-hidden shadow-moovdrop-inset z-10 mb-auto">
-          <div className="flex-center gap-4 sm:gap-6 md:gap-12 relative flex-[0_0_auto] min-w-0 w-full sm:w-auto">
-            <span className="font-dm-sans font-normal text-text-placeholder text-base sm:text-lg md:text-2xl tracking-[-0.61px] leading-[34.4px] whitespace-nowrap truncate">
+        <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between w-full max-w-[683px] gap-4 sm:gap-0 px-4 sm:px-6 md:px-9 py-4 md:py-[16.31px] bg-white rounded-moovdrop-md overflow-hidden shadow-moovdrop-inset z-10 mb-auto">
+          <div className="flex items-center justify-center gap-4 sm:gap-6 md:gap-12 relative flex-[0_0_auto] min-w-0 w-full sm:w-auto">
+            <span className="font-sans font-normal text-text-placeholder text-base sm:text-lg md:text-2xl tracking-[-0.61px] leading-[34.4px] whitespace-nowrap truncate">
               Select your desire vehicle
             </span>
             <img
@@ -57,7 +57,7 @@ export const Header = () => {
       </div>
 
       {/* Vehicle Fleet Image - Bottom */}
-      <div className="relative z-10 w-full flex-center">
+      <div className="relative z-10 w-full flex items-center justify-center">
         <img
           className="w-full max-w-[1262px] h-auto aspect-[3.28] object-contain mt-auto"
           alt="White SUV fleet"
