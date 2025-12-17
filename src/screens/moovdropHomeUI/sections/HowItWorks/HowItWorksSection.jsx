@@ -42,14 +42,14 @@ export const HowItWorksSection = () => {
             <Stack
               direction="vertical"
               spacing="lg"
-              className="md:flex-row md:items-start md:justify-between py-12 md:py-16 px-0 md:px-0 min-h-[788px]"
+              className="md:flex-row md:items-start md:justify-between py-12 md:py-16 px-0 md:px-0 md:min-h-[788px]"
             >
               {/* Left Column - Content */}
               <Stack spacing="lg" className="w-full md:w-1/2 px-4 md:px-20 z-10">
                 <Stack spacing="xs">
                   <p className="body-large">24/7 Delivery Services</p>
-                  <h2 className="heading-primary leading-tight md:leading-[55px] whitespace-nowrap">
-                    Fast.&nbsp;&nbsp;Simple.&nbsp;&nbsp;Affordable.
+                  <h2 className="heading-primary leading-tight md:leading-[55px] break-words md:whitespace-nowrap">
+                    Fast. Simple. Affordable.
                   </h2>
                 </Stack>
 
@@ -87,6 +87,7 @@ export const HowItWorksSection = () => {
           <Stack
             direction="vertical"
             spacing="lg"
+            align="center"
             className="md:flex-row md:items-center md:justify-center md:gap-14"
           >
             {/* Left - Phone Mockup */}
@@ -101,8 +102,8 @@ export const HowItWorksSection = () => {
             </div>
 
             {/* Right - Steps */}
-            <Stack spacing="lg" className="px-4 md:px-0">
-              <h2 className="heading-primary text-white leading-tight md:leading-[55px] max-w-lg">
+            <Stack spacing="lg" align="center" className="px-4 md:px-0 md:items-start">
+              <h2 className="heading-primary text-white leading-tight md:leading-[55px] max-w-lg text-center md:text-left">
                 Moving service connected
                 <br />
                 to your needs
@@ -149,17 +150,17 @@ export const HowItWorksSection = () => {
             </Stack>
 
             {/* Right - Truck Image */}
-            <div className="relative w-full md:w-[430px] h-[250px] md:h-[359px]">
-              <div className="absolute top-1/2 -translate-y-1/2 right-0 w-[260px] h-[331px] rounded-t-full overflow-hidden bg-gradient-to-br from-[#edede3] via-[#f1eca3] to-moovdrop-accent">
+            <div className="relative w-full md:w-[430px] h-[250px] md:h-[359px] overflow-hidden">
+              <div className="absolute top-1/2 -translate-y-1/2 right-0 w-[200px] sm:w-[260px] h-[250px] sm:h-[331px] rounded-t-full overflow-hidden bg-gradient-to-br from-[#edede3] via-[#f1eca3] to-moovdrop-accent">
                 <img
-                  className="w-[624px] h-[331px] ml-[-210px] mt-12"
+                  className="w-[480px] sm:w-[624px] h-[250px] sm:h-[331px] ml-[-160px] sm:ml-[-210px] mt-8 sm:mt-12"
                   alt="Truck with wooden dresser"
                   src="https://c.animaapp.com/F0ApqIw8/img/truck-with-wooden-dresser-2-1.png"
                 />
               </div>
 
               <img
-                className="absolute top-1/2 -translate-y-1/2 right-4 w-[453px] h-[331px]"
+                className="absolute top-1/2 -translate-y-1/2 right-2 sm:right-4 w-[350px] sm:w-[453px] h-[250px] sm:h-[331px]"
                 alt="Truck with wooden dresser"
                 src="https://c.animaapp.com/F0ApqIw8/img/truck-with-wooden-dresser-2-1-1@2x.png"
               />

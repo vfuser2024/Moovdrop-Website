@@ -3,10 +3,10 @@ import { Button } from "../../../../components/ui";
 
 export const Header = () => {
   return (
-    <header className="relative w-full min-h-[795px] bg-moovdrop-primary overflow-hidden flex flex-col">
+    <header className="relative w-full min-h-[600px] sm:min-h-[700px] md:min-h-[795px] bg-moovdrop-primary overflow-hidden flex flex-col">
       {/* Background Layer */}
       <img
-        className="absolute w-full h-full min-h-[795px] top-0 left-0 object-cover z-0"
+        className="absolute w-full h-full min-h-[600px] sm:min-h-[700px] md:min-h-[795px] top-0 left-0 object-cover z-0"
         alt="Layer"
         src="https://c.animaapp.com/F0ApqIw8/img/layer1.png"
       />
@@ -15,7 +15,7 @@ export const Header = () => {
       <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-4">
         {/* Decorative Icon - Top Right */}
         <img
-          className="absolute top-4 right-4 md:right-[1271px] w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[117px] md:h-[117px] z-20"
+          className="absolute top-4 right-4 w-12 h-12 sm:w-16 sm:h-16 md:w-[117px] md:h-[117px] z-20"
           alt="Frame"
           src="https://c.animaapp.com/F0ApqIw8/img/frame-2147236769.svg"
         />
